@@ -62,7 +62,7 @@ OrgId:          TWITT
 - dig should return resolved IP recorders of twitter.com if DNS server works properly.
 - Whois should return "OrgId: TWITT". That means the IP address returned from dig query belongs to twitter.com indeed, hence untaminated.
 - Whois was actually running inside the proxy container through the proxy tunnel to avoid potential access blocking.
-- Please have a look over the sibling project [server-trojan](https://github.com/samuelhbne/vpn-launchpad/tree/master/server-trojan) if you'd like to set a Trojan server.
+- Please have a look over the sibling project [server-trojan](https://github.com/samuelhbne/server-trojan) if you'd like to set a Trojan server.
 
 ## How to get the Trojan QR code for mobile connection
 
