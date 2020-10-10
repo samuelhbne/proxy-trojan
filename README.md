@@ -72,7 +72,7 @@ VPS-Server: 12.34.56.78
 Trojan-URL: trojan://my-secret@my-domain.com:443
 ```
 
-![QR code example](https://github.com/samuelhbne/vpn-launchpad/blob/master/images/qr-trojan.png)
+![QR code example](https://github.com/samuelhbne/proxy-trojan/blob/master/images/qr-trojan.png)
 
 ## How to stop and remove the running container
 
