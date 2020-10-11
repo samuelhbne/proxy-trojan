@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TJHOST=`cat /etc/trojan/client.json| jq -r ' ."remote_addr" '`
+TJPORT=`cat /etc/trojan/client.json| jq -r ' ."remote_port" '`
+TJPASS=`cat /etc/trojan/client.json| jq -r ' ."password"[0] '`
+
+TJIP=`dig +short $TJHOST|head -n1`
+if [ -z "$TJIP" ]; then
+    TJIP=$TJHOST
+fi
+
+echo "VPS-Server: $TJIP"
+echo "Trojan-URL: trojan://${TJPASS}@${TJHOST}:${TJPORT}"
