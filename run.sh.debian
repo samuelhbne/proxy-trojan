@@ -55,5 +55,5 @@ cat /usr/share/doc/trojan/examples/client.json-example  \
 
 /usr/bin/nohup trojan /etc/trojan/client.json &
 polipo -c /etc/polipo/config
-exec /usr/bin/dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+exec /usr/sbin/dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
