@@ -3,5 +3,5 @@
 
 # Allow only docker duild files
 !Dockerfile.*
-!status.sh
-!run.sh
+!status.*
+!run.*
