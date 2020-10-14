@@ -5,6 +5,7 @@ RUN apt-get -y update; apt-get -y install trojan git jq \
 	dnscrypt-proxy polipo ca-certificates proxychains4 \
 	&& update-ca-certificates
 
+ENV LSTNADDR="0.0.0.0"
 ENV SOCKSPORT="1080"
 ENV HTTPPORT="8123"
 ENV DNSPORT="53"
@@ -14,7 +15,7 @@ ENV POLIPO_CONF="/etc/polipo/config"
 
 RUN sed -i "s/^listen_addresses = .*/listen_addresses = \[\'0.0.0.0:$DNSPORT\'\]/g" $DNSCRYPT_CONF
 
-RUN echo "socksParentProxy=localhost:$SOCKSPORT" >>$POLIPO_CONF
+RUN echo "socksParentProxy=127.0.0.1:$SOCKSPORT" >>$POLIPO_CONF
 RUN echo "proxyAddress=$LSTNADDR" >>$POLIPO_CONF
 RUN echo "proxyPort=$HTTPPORT" >>$POLIPO_CONF
 RUN echo "daemonise=true" >>$POLIPO_CONF
