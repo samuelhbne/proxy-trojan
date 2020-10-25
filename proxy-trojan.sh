@@ -57,7 +57,7 @@ if [ -z "$DUCKDNSDOMAIN" ] || [ -z "$TRJPORT" ] || [ -z "$TRJPASS" ]; then
 	exit 1
 fi
 
-if [ `docker ps -a| grep $CTNNAME|wc -l` -gt 0 ]; then
+if [ `docker ps -a|grep $IMGNAME:$TARGET|grep $CTNNAME|wc -l` -gt 0 ]; then
         docker stop $CTNNAME >/dev/null
 	docker rm $CTNNAME >/dev/null
 fi
