@@ -14,7 +14,7 @@ RUN git clone --branch=${VERSION} https://github.com/trojan-gfw/trojan.git \
 RUN cd /root && git clone https://github.com/jech/polipo && cd polipo && make
 
 
-FROM arm64v8/alpine:3.12
+FROM arm64v8/alpine:3.14
 
 RUN apk add bash openssl jq curl bind-tools whois \
 	dnscrypt-proxy ca-certificates proxychains-ng \
